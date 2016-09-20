@@ -1,0 +1,17 @@
+/// <reference path="jquery.d.ts" />
+module SkillBakery.util.web{
+	///html encode astring to mjQuery
+	export function HtmlEncode(value:string){
+		return $('<div/').text(value).html();
+	}
+	export function HtmlDecode(value:string){
+		return $('<div/').html(value).text();
+		}
+		export function GetId(text:string,alignRight?:boolean,alignCenter?:boolean){
+if(alignCenter) 
+	return "<td class='text-center'>"+text+"</td>";
+else
+	return "<td"+(alignRight? "style='text-align:right:'>":">")+text+"</td>";
+		}
+	
+}
